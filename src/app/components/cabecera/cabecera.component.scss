@@ -1,0 +1,34 @@
+@import 'mixins.scss' , 'keyframes.scss';
+
+.header{
+ 
+    width: 100%;
+    background-color:white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 1em 0;
+    border-top: 1px solid grey;
+    color: black;
+
+    &__ul{
+        @include flexible( row, nowrap, space-around, center, initial);
+    }
+ 
+    &__a{
+        @include flexible( column, nowrap, center, center, initial);
+    }
+    &__i{
+        font-size: 1.4em;
+        margin: 0 0 .2em;
+    }
+    &__span{
+        font-size: .8em;
+    }
+    .este .li__i{
+        color: blue;
+    }
+    .este .li__span{
+        color: blue;
+    }
+}

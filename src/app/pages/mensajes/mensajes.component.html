@@ -1,0 +1,55 @@
+<app-minicabecera
+[titulo]="receptor.h2" 
+[editarBtn]="false"
+[escribirBtn]="false"
+[atrasBtn]="true"
+[camaraBtn]="true"
+[phoneBtn]="true"
+>
+</app-minicabecera>
+
+<section class="conversations">
+    <div 
+    *ngFor="let cadaCharla of receptor.charlas"
+    class="conversations__messages {{cadaCharla.envio}}" 
+    >{{cadaCharla.mensaje}}
+    </div>
+    <div class="conversations__writing" 
+    [ngClass]="{'ver': writing}">
+        <div class="writing__puntos"></div>
+        <div class="writing__puntos"></div>
+        <div class="writing__puntos"></div>
+    </div>
+</section>
+
+<section class="sent him">
+    <input class="sent__input"
+    type="text" 
+    placeholder="Escribe tu mensaje"
+    name='valorInput2'
+    [(ngModel)]="valorInput2"
+    (keydown)="userWriting()"
+    (focusout)="noUserWriting()"
+    >
+    <button
+    (click)="recibirMensaje()"
+    class="sent__button">
+        <div class="far fa-paper-plane"></div>
+    </button>
+</section>
+
+<section class="sent me">
+    <input class="sent__input"
+    type="text"
+    placeholder="Escribe tu mensaje"
+    name="valorInput"
+    (keydown)="userWriting()"
+    (focusout)="noUserWriting()"
+    [(ngModel)]="valorInput">
+    <button
+    (click)="enviarMensaje ()"
+    class="sent__button">
+        <div class="far fa-paper-plane"></div>
+    </button>
+</section>
+

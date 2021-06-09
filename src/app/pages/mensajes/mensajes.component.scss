@@ -1,0 +1,95 @@
+@import 'mixins.scss' , 'keyframes.scss';
+
+.conversations{
+    width: 100%;
+    // background-color: lightpink;
+    padding: 1em;
+
+    &__messages{
+        width: 100%;
+        // background-color: lightsalmon;
+        margin: 1em 0;
+        padding: .6em;
+        border-radius: 5px;
+
+        &.me{
+            background-color:#DDF8C6;
+        }
+        &.him{
+            background-color: #f7f7f7;
+        }
+    }
+    &__writing{
+        width: 30%;
+        background-color: grey;
+        border-radius: 5px;
+        padding: .5em;
+        margin: auto;
+        opacity: 0;
+        
+        @include flexible (row, nowrap, center, center, initial);
+        &.ver{
+            opacity: 1;
+            transition: all .2s ease;
+        }
+    }
+    .writing__puntos{
+        width: 10px;
+        height: 10px;
+        margin: 0 .2em;
+        background-color: lightgrey;
+        border-radius: 50%;
+
+        animation: scale 3s ease infinite both;
+        &:nth-of-type(1){
+            animation-delay: .4s;
+        }
+        &:nth-of-type(2){
+            animation-delay: .6s;
+        }
+        &:nth-of-type(3){
+            animation-delay: .8s;
+        }
+    }
+    @keyframes scale{
+        0%{
+            transform: scale(1);
+        }
+        50%{
+            transform: scale(.5);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
+
+}
+
+
+.sent{
+    width: 100%;
+    height: 50px;
+    // background-color: pink; 
+    padding: .9em;
+    border-top: 1px solid grey;
+    position: absolute;
+    bottom: 68px;
+    @include flexible(row, nowrap, space-around, center, initial);
+
+    &__input{
+        width: 70%;
+        padding: .5em 1em;
+        border-radius: 5px;
+    }
+    &__button{
+        width: 30px;
+        height: 30px;
+        background-color: blue;
+        border-radius: 50%;
+        color: white;
+    }
+    &.him{
+
+        bottom: 119px;
+    }
+}

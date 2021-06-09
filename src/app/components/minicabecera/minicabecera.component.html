@@ -1,0 +1,31 @@
+<header class="header">
+    <span
+    *ngIf="atrasBtn"
+    class="header__span">
+    <i class="fas fa-angle-left"></i>
+    </span>
+
+    <span
+    *ngIf="editarBtn"
+    class="header__span">Editar
+    </span>
+
+    <h2 class="header__h2">
+        {{titulo}}
+    </h2>
+
+    <span
+    *ngIf="camaraBtn"
+    class="header__span">
+        <i class="fas fa-video"></i>
+    </span>
+    <span
+    *ngIf="camaraBtn"
+    class="header__span">
+        <i class="fas fa-phone"></i>
+    </span>
+
+    <i *ngIf="escribirBtn"
+    class="header__i far fa-edit">
+    </i>
+</header>

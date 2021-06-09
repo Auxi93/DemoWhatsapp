@@ -1,0 +1,39 @@
+<header class="header">
+    <ul class="header__ul">
+        <li 
+        class="header__li"
+        *ngFor="let item of cabecera">
+            <a 
+            class ="header__a"
+            [ngClass]="{'este': esActivo (item.ruta)}"
+            (click)="viajar(item.ruta)">
+                <i class="li__i {{item.clase}}"></i>    
+                <span class="li__span">{{item.texto}}</span>
+            </a>
+        </li>
+        <!-- <li class="header__li">
+            <a class ="header__a" [routerLink]=" '/llamadas' ">
+                <i class="fas fa-phone"></i>    
+                <span>Llamadas</span>
+            </a>
+        </li>
+        <li class="header__li">
+            <a class ="header__a" [routerLink]="'/camara'">
+                <i class="fas fa-camera "></i>    
+                <span>Cámara</span>
+            </a>
+        </li>
+        <li class="header__li">
+            <a class ="header__a" [routerLink]="'/chats'">
+                <i class="fab fa-facebook-messenger "></i>    
+                <span>Chats</span>
+            </a>
+        </li>
+        <li class="header__li">
+            <a class ="header__a" [routerLink]="'/configuracion'">
+                <i class="fas fa-cog"></i>    
+                <span>Configuración</span>
+            </a>
+        </li> -->
+    </ul>
+</header>

@@ -1,0 +1,21 @@
+@import 'mixins.scss' , 'keyframes.scss';
+.header{
+    width: 100%;
+    // background-color: lightblue;
+    border-bottom: 2px solid lightgray;
+    padding: 1em;
+    @include flexible (row, nowrap, space-between, center, initial);
+    &__span{
+        color: lightskyblue;
+        margin: .4em;
+    }
+    &__h2{
+        width: 50%;
+        text-align: center;
+        font-weight: 700;
+        margin: auto;
+    }
+    &__i{
+        color: lightskyblue;
+    }
+}

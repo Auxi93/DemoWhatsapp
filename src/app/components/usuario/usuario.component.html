@@ -1,0 +1,29 @@
+<div class="person">
+    <div class="person__col">
+        <div class="person__circle" [ngClass]="{'ver': seccion === 'estados'}">
+            <img class="person__img" [src]="info.img" alt="Usuario">
+        </div>
+    </div>
+    <div class="person__col">
+        <h2 class="person__h2">{{info.h2}}</h2>
+        <h3 class="person__h3" *ngIf="seccion === 'configuracion'">{{info.h3}}</h3>
+        <p class="person__chat" *ngIf="seccion === 'chats'">{{info.chat}}</p>
+        <p class="person__call" *ngIf="seccion === 'llamadas'"><i class="fas fa-phone"></i><span>Saliente</span> </p>
+        <p class="person__estado " *ngIf="seccion === 'estados'">Hace {{info.estado}} horas</p>
+    </div>
+    <div class="person__col">
+        <span class="person__date" *ngIf="seccion === 'chats'">{{info.fecha}}</span>
+        <div class="person__pins">
+            <i class="person__i fas fa-volume-mute" *ngIf="seccion === 'chats'"></i>
+            <i class="person__i fas fa-thumbtack" *ngIf="seccion === 'chats'"></i>
+            <i class="person__i fas fa-qrcode" *ngIf="seccion === 'configuracion'"></i>
+        </div>
+    </div>
+    <div class="person__col sencillo" *ngIf="seccion === 'llamadas'">
+        <span class="person__day">miércoles</span>
+        <div class="person__pins">
+            <i class="person__i fas fa-info"></i>
+        </div>
+    </div>
+
+</div>

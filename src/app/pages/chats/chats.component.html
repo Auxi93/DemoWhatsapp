@@ -1,0 +1,11 @@
+<app-minicabecera
+[titulo] ="'Chats'">   
+</app-minicabecera>
+
+<app-usuario
+*ngFor="let cadaUsuario of usuarios"
+(click) ="viajar(cadaUsuario.id)"
+[info]="cadaUsuario"
+[seccion]="'chats'"
+>
+</app-usuario>

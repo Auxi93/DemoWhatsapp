@@ -1,0 +1,8 @@
+<app-minicabecera
+[titulo] ="'Estados'">
+    
+</app-minicabecera>
+<app-usuario
+*ngFor="let cadaUsuario of usuarios"
+[info] ="cadaUsuario"
+[seccion]="'estados'"></app-usuario>

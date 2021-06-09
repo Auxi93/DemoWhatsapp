@@ -1,0 +1,137 @@
+@import 'mixins.scss' , 'keyframes.scss';
+.main{
+    width: 100%;
+    // height: 100vh;
+    // background-color: lightgray;
+}
+.person{
+    background-color: white;
+    @include flexible (row, nowrap, space-between, center, initial);
+    &__col{
+        &:nth-of-type(1) {width:20%;}
+        &:nth-of-type(2) {width: 60%;}
+        &:nth-of-type(3) {width: 20%;}
+    }
+    &__img{
+        width: 60px;
+        height: 60px;
+        // background: chartreuse;
+        border-radius: 50%;
+    }
+    &__h2{
+        font-size: 1.3em;
+         // background: chartreuse;
+    }
+    &__h3{
+        color: grey;
+    }
+    &__i{
+        background-color: lightgrey;
+        border-radius: 50%;
+        color: blue;
+        padding: .5em;
+    }
+}
+.list{
+    margin: 2em 0;
+    &__item{
+        background-color: white;
+        @include flexible (row, nowrap, space-between, center, initial);
+        padding: .2em .5em;
+        border : {
+            top: 1px solid lightgrey;
+            bottom: 1px solid lightgrey;
+        }
+        &:nth-of-type(1) .list__icon{
+            background-color: #ffc527;
+        }
+        &:nth-of-type(2){
+            margin-bottom: 2em;
+            .list__icon{
+                background-color: #07ada0;
+            }
+        }
+         
+
+        &:nth-of-type(3) .list__icon{
+            background-color: #397aff;
+        }
+        &:nth-of-type(4) .list__icon{
+            background-color: #4bd763;
+        }
+        &:nth-of-type(5) .list__icon{
+            background-color:#ff3b2f;
+        }
+        &:nth-of-type(6){
+            margin-bottom: 2em;
+            .list__icon{
+                background-color: #4bd763;
+            }
+        } 
+
+
+        &:nth-of-type(7) .list__icon{
+            background-color: #4ba0ff;
+        }
+        &:nth-of-type(8) .list__icon{
+            background-color:#ff2c55;
+        }
+    }
+
+   
+    &__icon{
+        width: 26px;
+        height: 26px;
+        background-color: lightgrey;
+        color: white;
+        border-radius: 5px;
+        @include flexible(row, nowrap, center, center, initial);
+    }
+    &__h4{
+        width: calc( 90% - 26px );
+        // background-color: salmon;
+        margin: 0 .5em;
+        font-size: 1em;
+    }
+    &__col{
+        width: 10%;
+        @include flexible(row, nowrap, space-around, center, initial);
+
+    }
+    &__number{
+        width: 20px;
+        height: 20px;
+        background-color: grey;
+       
+        @include flexible(row, nowrap, center, center, initial);
+        color: white;
+        border-radius: 50%;
+        margin: 0 .5em 0 0;
+    }
+    &__arrow{
+        color: lightgrey;
+        font-size: 1.3em;
+    }
+}
+
+
+
+.rrss{
+    // background-color: pink;
+    text-align: center;
+
+    &__span{
+        color: grey;
+        font-size: .7em;
+        line-height: .1em;
+    }
+
+    &__h5{
+        text-transform: uppercase;
+        letter-spacing: .5em;
+        font: {
+            size: .8em;
+            weight:bold;
+        }
+    }
+}

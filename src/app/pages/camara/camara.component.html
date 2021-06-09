@@ -1,0 +1,26 @@
+<app-minicabecera
+[titulo] ="'Cámara'">
+    
+</app-minicabecera>
+
+<!-- Stream video via webcam -->
+<div class="video-wrap">
+    <video 
+    [ngClass]="{
+        'black': filtroNegro, 'sepia': filtroSepia
+    }"
+    id="video" playsinline autoplay></video>
+</div>
+
+<!-- Trigger canvas web API -->
+<div class="controller">
+    <button id="snap"></button>
+</div>
+
+<!-- Webcam video snapshot -->
+<canvas id="canvas" width="640" height="480"></canvas>
+
+<ul>
+    <li (click) ="ponerfiltroNegro()"><i class="fas fa-adjust"></i></li>
+    <li (click)="ponerfiltroSepia()"><i class="fas fa-sun"></i></li>
+</ul>

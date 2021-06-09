@@ -1,0 +1,28 @@
+<app-minicabecera
+
+[titulo] ="'Configuración'"
+[editarBtn] ="false"
+[escribirBtn] ="false"
+>   
+</app-minicabecera>
+
+<main class="main">
+    <app-usuario [seccion]="'configuracion'"></app-usuario>
+    <ul class="list">
+        <li 
+        *ngFor="let item of options"
+        class="list__item">
+            <i class="list__icon {{item.clase}}"></i>
+            <h4 class="list__h4">{{item.h4}}</h4>
+            <div class="list__col">
+                <span class="list__number" *ngIf="item.numero">{{item.numero}}</span>
+                <span class="list__arrow fas fa-angle-right"></span>
+            </div>
+        </li>
+    </ul>
+
+    <div class="rrss">
+        <span class="rrss__span">from</span>
+        <h5 class="rrss__h5">Facebook</h5>
+    </div>
+</main>
