@@ -1,5 +1,9 @@
 # Whatsapp
 
+In this section you'll find the Whatsapp app layout with Angular, HTML, SASS and TypeScript with the contacts, status and calls page.
+
+####
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
 
 ## Development server
